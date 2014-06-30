@@ -1,0 +1,24 @@
+CREATE TABLE noticia ( 
+not_id INT(11) NOT NULL AUTO_INCREMENT, 
+not_titulo VARCHAR(100) NOT NULL, 
+not_data DATETIME NOT NULL, 
+not_autor_id INT(11) NOT NULL, 
+not_foto VARCHAR(50), 
+not_texto TEXT NOT NULL, 
+not_categoria_id INT(11) NOT NULL, 
+PRIMARY KEY (not_id) 
+);
+
+CREATE TABLE categoria ( 
+cat_id INT(11) NOT NULL AUTO_INCREMENT, 
+cat_desc VARCHAR(50) NOT NULL, 
+PRIMARY KEY (cat_id) 
+);
+
+CREATE TABLE autor ( 
+aut_id INT(11) NOT NULL AUTO_INCREMENT, 
+aut_nome VARCHAR(50) NOT NULL, 
+aut_usuario VARCHAR(50) NOT NULL,
+aut_senha VARCHAR(255) NOT NULL,
+PRIMARY KEY (aut_id) 
+);
